@@ -1,11 +1,17 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
-    int year;
+    int num;
+    int count = 0;
 
-    scanf("%i", &year);
+    scanf("%i", &num);
 
-    printf("%i\n", (year % 4 == 0 && year % 100 != 0) || year % 400 == 0);
+    while (num > 0) {
+        count += num % 2;
+        num = num / 2;
+    }
+
+    printf("the result is : %i\n", count);
 
     return 0;
 }
