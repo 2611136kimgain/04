@@ -1,17 +1,17 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
-    int num;
-    int count = 0;
+    int time;
+    int hour, minute, second;
 
-    scanf("%i", &num);
+    scanf("%i", &time);
 
-    while (num > 0) {
-        count += num % 2;
-        num = num / 2;
-    }
+    hour = time / 3600;
+    minute = (time % 3600) / 60;
+    second = time % 60;
 
-    printf("the result is : %i\n", count);
+    printf("The time for %i second is %i : %i : %i\n",
+           time, hour, minute, second);
 
     return 0;
 }
