@@ -1,15 +1,11 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
-    int time;
-    int minute, second;
+    int year;
 
-    scanf("%i", &time);
+    scanf("%i", &year);
 
-    minute = time / 60;
-    second = time % 60;
-
-    printf("the time is %i:%i\n", minute, second);
+    printf("%i\n", (year % 4 == 0 && year % 100 != 0) || year % 400 == 0);
 
     return 0;
 }
